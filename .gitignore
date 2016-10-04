@@ -1,0 +1,9 @@
+# 1004 added by liu
+*.pyc
+*.pdf
+*.tex
+
+annotations/
+detections/
+plot_before/
+sourceinsight/
