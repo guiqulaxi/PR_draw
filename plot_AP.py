@@ -72,7 +72,7 @@ if __name__ == "__main__":
             ovr = 0.1
         dets = loadDetections(fn)
         dets = filterdet(dets, minpix)
-        color, label = getColorLabel(fn)
+        color, label = getColorLabel_widerface(fn)
         r = evaluate_optim(
             tsImages, dets, label, color, point=is_point, iter=nit, ovr=ovr)
         res.append(r)

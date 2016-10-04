@@ -1,8 +1,18 @@
 import pylab
 import numpy as np
 import os
-colorCounter = 11
+colorCounter = 0 #11
 color_list = pylab.cm.Set1(np.linspace(0, 1, 26))
+
+def getColorLabel_widerface(name):
+    print (name)
+    global colorCounter, color_list
+    #1004: unlike AFW or Pascal, here we don't assign a specific color to a method
+    color = color_list[colorCounter]
+    colorCounter = colorCounter + 1
+    label = os.path.splitext(os.path.basename(name))[0]
+    label = label.replace("_", " ")
+    return [color, label]
 
 
 def getColorLabel(name):
